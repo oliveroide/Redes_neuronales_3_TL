@@ -56,8 +56,13 @@ flowchart TD
 ```
 Redes_neuronales_3_TL/
 ├── Leafs_plants.ipynb      # Notebook Jupyter interactivo con el pipeline completo
+├── plant_leaves.py         # Script de entrenamiento en el clúster YUCA
+├── plant_leaves.slrm       # Job SLURM para ejecutar el entrenamiento
+├── app.py                  # Demo con cámara en vivo y Streamlit
+├── pinguinos.yml           # Ambiente de conda exportado
 ├── README.md               # Documentación general del repositorio
-├── articulo_medium.md      # Borrador completo del artículo para publicación en Medium
+├── articulo_medium.md      # Artículo para Medium
+└── resultados/             # Modelo, métricas, curvas y matriz de confusión
 ```
 
 ---
@@ -73,6 +78,7 @@ Redes_neuronales_3_TL/
 2. **Instalar dependencias necesarias:**
    ```bash
    pip install tensorflow tensorflow-datasets matplotlib numpy scikit-learn
+   pip install streamlit streamlit-webrtc opencv-python-headless av pillow
    ```
 
 3. **Ejecutar el Notebook:**
@@ -80,10 +86,16 @@ Redes_neuronales_3_TL/
    jupyter notebook Leafs_plants.ipynb
    ```
 
+4. **Ejecutar la demo con cámara:**
+   ```bash
+   streamlit run app.py
+   ```
+   La app carga `resultados/mejor_fase2.keras` y `resultados/clases.json`.
+
 ---
 
 ## 🔗 6. Enlaces y Evidencias de Entrega
 
 * **Repositorio en GitHub:** [https://github.com/oliveroide/Redes_neuronales_3_TL](https://github.com/oliveroide/Redes_neuronales_3_TL)
-* **Artículo en Medium:** *(Enlace pendiente de publicación en Medium)*
-* **Demostración en Video (App Móvil):** *(Enlace pendiente de video)*
+* **Artículo en Medium:** [Clasificación de 22 enfermedades en hojas de plantas usando redes convolucionales y MobileNetV2](https://medium.com/@oliveroide53/clasificaci%C3%B3n-de-22-enfermedades-en-hojas-de-plantas-usando-redes-convolucionales-y-mobilenetv2-18d66ed1741c?postPublishedType=initial)
+* **Video de demostración móvil:** se entrega por separado, según lo solicitado por la docente. No se incluye en el repositorio.

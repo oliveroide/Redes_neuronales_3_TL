@@ -199,6 +199,7 @@ dependencies:
       - sklearn-compat==0.1.6
       - tensorboard==2.21.0
       - tensorboard-data-server==0.7.2
+      - tensorflow==2.21.0
       - tensorflow-datasets==4.9.10
       - tensorflow-metadata==1.21.0
       - toml==0.10.2
